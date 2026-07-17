@@ -2375,7 +2375,177 @@ transition-duration:
 
 
 }
+/* ==========================================================
+   PUZZLE ERROR EFFECT
+========================================================== */
 
+
+.shake{
+
+
+animation:shake .5s ease;
+
+
+}
+
+
+
+@keyframes shake{
+
+
+0%{
+
+transform:translateX(0);
+
+}
+
+
+
+25%{
+
+transform:translateX(-12px);
+
+
+}
+
+
+
+50%{
+
+transform:translateX(12px);
+
+
+}
+
+
+
+75%{
+
+transform:translateX(-8px);
+
+
+}
+
+
+
+100%{
+
+transform:translateX(0);
+
+
+}
+
+
+}
+
+
+}#continueVideo,
+#continueHeart,
+#continueTimeline,
+#continueConstellation,
+#continueLetter{
+
+
+opacity:0;
+
+
+transition:
+
+opacity 1.5s ease;
+
+
+}
+#memoryStars::before{
+
+
+content:"";
+
+
+position:absolute;
+
+
+inset:0;
+
+
+background:
+
+
+linear-gradient(
+
+45deg,
+
+transparent 48%,
+
+rgba(216,164,58,.5) 49%,
+
+transparent 50%
+
+);
+
+
+opacity:.3;
+
+
+}
+.final-message h2{
+
+
+font-family:
+
+"Dancing Script",cursive;
+
+
+font-size:
+
+clamp(40px,6vw,80px);
+
+
+color:
+
+var(--cream);
+
+
+margin-top:30px;
+
+
+text-shadow:
+
+0 0 30px gold;
+
+
+}
+.final-world{
+
+
+animation:
+
+cameraMove 20s infinite alternate;
+
+
+}
+
+
+
+@keyframes cameraMove{
+
+
+from{
+
+
+transform:scale(1);
+
+
+}
+
+
+
+to{
+
+
+transform:scale(1.08);
+
+
+}
 
 
 }
