@@ -1,0 +1,705 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>The Journey to July 19 🌻</title>
+
+<meta name="description" content="A cinematic birthday journey created with love.">
+
+
+<!-- Fonts -->
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Cormorant+Garamond:wght@300;400;600&family=Dancing+Script:wght@400;600&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+
+
+<body>
+
+
+<!-- ==========================
+LOADING SCREEN
+========================== -->
+
+
+<div id="loader">
+
+    <div class="loader-inner">
+
+        <div class="loader-title">
+            The Journey to July 19 🌻
+        </div>
+
+
+        <div class="loader-text">
+            Preparing something made only for you...
+        </div>
+
+
+        <div class="loader-bar">
+
+            <span></span>
+
+        </div>
+
+
+    </div>
+
+</div>
+
+
+
+
+
+<!-- ==========================
+AMBIENT WORLD
+========================== -->
+
+
+<div id="universe">
+
+
+    <div id="stars"></div>
+
+
+    <div id="goldDust"></div>
+
+
+    <div id="petals"></div>
+
+
+    <div id="lightGlow"></div>
+
+
+</div>
+
+
+
+
+
+
+
+
+<!-- ==========================
+AUDIO
+========================== -->
+
+
+<audio id="ambientMusic" loop>
+
+    <source src="assets/music/ambient.mp3" type="audio/mpeg">
+
+</audio>
+
+
+
+
+
+
+
+
+<!-- ==========================
+JOURNEY CONTAINER
+========================== -->
+
+
+<main id="journey">
+
+
+
+
+
+
+
+<!-- ==========================
+CHAPTER 0
+OPENING
+========================== -->
+
+
+<section class="chapter active" id="chapterIntro">
+
+
+<div class="scene-center">
+
+
+<h1 class="opening-title">
+
+
+<span>
+Before there was us...
+</span>
+
+
+<span>
+there was you.
+</span>
+
+
+</h1>
+
+
+
+<button id="beginJourney">
+
+✦ Begin The Journey ✦
+
+</button>
+
+
+
+</div>
+
+
+</section>
+
+
+
+
+
+
+
+
+
+<!-- ==========================
+CHAPTER 1
+MEMORY GATE
+========================== -->
+
+
+<section class="chapter" id="chapterPuzzle">
+
+
+<div class="scene-center">
+
+
+<div class="memory-gate">
+
+
+<h2>
+Where did our story begin?
+</h2>
+
+
+<p>
+Enter the year that changed everything.
+</p>
+
+
+
+<input 
+id="yearInput"
+maxlength="4"
+placeholder="2018">
+
+
+
+<button id="unlockMemory">
+
+Unlock Memory
+
+</button>
+
+
+
+<div id="puzzleMessage"></div>
+
+
+</div>
+
+
+</div>
+
+
+</section>
+
+
+
+
+
+
+
+
+
+<!-- ==========================
+CHAPTER 2
+HEART
+========================== -->
+
+
+<section class="chapter" id="chapterHeart">
+
+
+<div class="scene-center">
+
+
+<h2>
+Touch the heart...
+</h2>
+
+
+
+<div id="whiteHeart">
+
+🤍
+
+</div>
+
+
+
+<p id="heartMessage"></p>
+
+
+
+<button id="continueHeart">
+
+Continue
+
+</button>
+
+
+</div>
+
+
+</section>
+
+
+
+
+
+
+
+
+
+<!-- ==========================
+CHAPTER 3
+HER JOURNEY
+========================== -->
+
+
+<section class="chapter" id="chapterTimeline">
+
+
+<div class="timeline-wrapper">
+
+
+<h2>
+Her Journey
+</h2>
+
+
+
+<div class="timeline-card">
+
+
+<img 
+id="timelineImage"
+src="assets/images/timeline1.jpg"
+alt="Memory">
+
+
+<div class="timeline-overlay">
+
+
+<h3 id="timelineTitle">
+
+The Beginning
+
+</h3>
+
+
+
+<p id="timelineText">
+
+A beautiful story waiting to unfold.
+
+</p>
+
+
+</div>
+
+
+</div>
+
+
+
+
+
+<div class="timeline-controls">
+
+
+<button id="previousMemory">
+←
+</button>
+
+
+
+<div id="timelineDots"></div>
+
+
+
+<button id="nextMemory">
+→
+</button>
+
+
+</div>
+
+
+
+
+
+<button id="continueTimeline">
+
+Continue
+
+</button>
+
+
+</div>
+
+
+</section>
+
+
+
+
+
+
+
+
+
+<!-- ==========================
+CHAPTER 4
+CONSTELLATION
+========================== -->
+
+
+<section class="chapter" id="chapterConstellation">
+
+
+<div class="scene-center">
+
+
+<h2>
+Our Constellation ✨
+</h2>
+
+
+
+<div id="nightSky">
+
+
+<div id="memoryStars"></div>
+
+
+</div>
+
+
+
+
+<div id="starCount">
+
+0 / 8 Memories
+
+</div>
+
+
+
+
+<div id="memoryCard">
+
+
+<h3 id="memoryTitle">
+
+</h3>
+
+
+<p id="memoryDescription">
+
+</p>
+
+
+
+<button id="closeMemory">
+
+Close
+
+</button>
+
+
+</div>
+
+
+
+
+
+<button id="continueConstellation">
+
+Continue
+
+</button>
+
+
+
+</div>
+
+
+</section>
+
+
+
+
+
+
+
+
+
+<!-- ==========================
+CHAPTER 5
+BIRTHDAY VIDEO
+========================== -->
+
+
+<section class="chapter" id="chapterVideo">
+
+
+<div class="cinema-room">
+
+
+<h2>
+A Birthday Film For You
+</h2>
+
+
+
+<div class="video-frame">
+
+
+<video id="birthdayVideo">
+
+<source src="assets/video/birthday.mp4" type="video/mp4">
+
+</video>
+
+
+
+<button id="playBirthdayVideo">
+
+▶
+
+</button>
+
+
+</div>
+
+
+
+
+<button id="continueVideo">
+
+Continue
+
+</button>
+
+
+
+</div>
+
+
+</section>
+
+
+
+
+
+
+
+
+
+<!-- ==========================
+CHAPTER 6
+LOVE LETTER
+========================== -->
+
+
+<section class="chapter" id="chapterLetter">
+
+
+<div class="letter-scene">
+
+
+<div id="envelope">
+
+
+✉
+
+</div>
+
+
+
+<button id="openLetter">
+
+Open Letter
+
+</button>
+
+
+
+
+<div id="letterPaper">
+
+
+<p id="letterText"></p>
+
+
+
+<h3>
+— Salik
+</h3>
+
+
+</div>
+
+
+<button id="continueLetter">
+
+Continue
+
+</button>
+
+
+
+</div>
+
+
+</section>
+
+
+
+
+
+
+
+
+
+<!-- ==========================
+CHAPTER 7
+FINAL REVEAL
+========================== -->
+
+
+<section class="chapter" id="chapterFinal">
+
+
+<div class="final-world">
+
+
+<div class="sunset"></div>
+
+
+<div class="sunflower-field"></div>
+
+
+
+<div class="final-message">
+
+
+<p id="finalLineOne">
+
+Every chapter brought me closer...
+
+</p>
+
+
+
+<p id="finalLineTwo">
+
+...to the most beautiful person I know.
+
+</p>
+
+
+
+
+<h1 id="loveReveal">
+
+I LOVE YOU
+
+</h1>
+
+
+
+
+<h2>
+
+Happy Birthday, my sunshine.
+
+</h2>
+
+
+
+<div class="signature">
+
+— Salik
+
+</div>
+
+
+
+
+<div class="secret-code">
+
+NGI × STROKPO
+
+</div>
+
+
+
+
+<button id="restartJourney">
+
+Restart Journey
+
+</button>
+
+
+</div>
+
+
+
+</div>
+
+</section>
+
+
+
+
+
+
+</main>
+
+
+
+
+
+
+<script src="script.js"></script>
+
+
+</body>
+
+</html>
