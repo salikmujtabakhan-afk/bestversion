@@ -1878,4 +1878,17 @@ break;
 
 
 });
-  
+  document.addEventListener(
+"click",
+function startOnce(){
+
+startMusic();
+
+document.removeEventListener(
+"click",
+startOnce
+);
+
+},
+{once:true}
+);
