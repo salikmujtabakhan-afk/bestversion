@@ -1,0 +1,2381 @@
+/* ==========================================================
+   THE JOURNEY TO JULY 19 🌻
+   PREMIUM CINEMATIC EDITION
+   STYLE.CSS
+========================================================== */
+
+
+/* ==========================================================
+   RESET
+========================================================== */
+
+
+*{
+
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+
+}
+
+
+
+html,
+body{
+
+    width:100%;
+    height:100%;
+
+    overflow:hidden;
+
+    background:#050505;
+
+    color:white;
+
+    font-family:"Poppins",sans-serif;
+
+}
+
+
+
+
+
+
+
+/* ==========================================================
+   GLOBAL VARIABLES
+========================================================== */
+
+
+:root{
+
+
+    --black:#050505;
+
+    --brown:#241307;
+
+    --gold:#d8a43a;
+
+    --sunflower:#f7c843;
+
+    --cream:#fff5df;
+
+    --white:#ffffff;
+
+
+}
+
+
+
+
+
+
+
+
+
+/* ==========================================================
+   LOADING SCREEN
+========================================================== */
+
+
+#loader{
+
+
+    position:fixed;
+
+    inset:0;
+
+
+    background:
+
+
+    radial-gradient(
+
+    circle,
+
+    #3a2108,
+
+    #050505 70%
+
+    );
+
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+
+    z-index:9999;
+
+
+    transition:
+
+    opacity 2s ease,
+
+    visibility 2s ease;
+
+
+}
+
+
+
+
+
+#loader.hide{
+
+
+    opacity:0;
+
+    visibility:hidden;
+
+
+}
+
+
+
+
+
+
+.loader-inner{
+
+
+    text-align:center;
+
+
+}
+
+
+
+
+
+.loader-title{
+
+
+    font-family:"Cinzel",serif;
+
+
+    font-size:
+
+    clamp(30px,5vw,60px);
+
+
+    letter-spacing:4px;
+
+
+    color:var(--cream);
+
+
+    animation:
+
+    softGlow 3s infinite alternate;
+
+
+}
+
+
+
+
+
+
+.loader-text{
+
+
+    margin-top:25px;
+
+
+    font-family:
+
+    "Cormorant Garamond",serif;
+
+
+    font-size:26px;
+
+
+    opacity:.8;
+
+
+}
+
+
+
+
+
+
+.loader-bar{
+
+
+    width:280px;
+
+
+    height:4px;
+
+
+    margin:40px auto;
+
+
+    background:
+
+    rgba(255,255,255,.15);
+
+
+    border-radius:20px;
+
+
+    overflow:hidden;
+
+
+}
+
+
+
+
+.loader-bar span{
+
+
+    display:block;
+
+
+    width:0%;
+
+
+    height:100%;
+
+
+    background:
+
+    linear-gradient(
+
+    90deg,
+
+    gold,
+
+    #fff
+
+    );
+
+
+    transition:.3s ease;
+
+
+}
+
+
+
+
+
+
+
+@keyframes softGlow{
+
+
+from{
+
+
+text-shadow:
+
+0 0 15px rgba(216,164,58,.3);
+
+
+}
+
+
+to{
+
+
+text-shadow:
+
+0 0 50px rgba(216,164,58,.9);
+
+
+}
+
+
+}
+
+
+
+
+
+
+
+
+
+/* ==========================================================
+   CINEMATIC UNIVERSE BACKGROUND
+========================================================== */
+
+
+#universe{
+
+
+    position:fixed;
+
+
+    inset:0;
+
+
+    overflow:hidden;
+
+
+    z-index:-1;
+
+
+    background:
+
+
+    radial-gradient(
+
+    circle at top,
+
+    #1a1628,
+
+    #050505 65%
+
+    );
+
+
+}
+
+
+
+
+
+
+#stars{
+
+
+    position:absolute;
+
+    inset:0;
+
+
+    background-image:
+
+
+    radial-gradient(
+
+    white 1px,
+
+    transparent 1px
+
+    );
+
+
+    background-size:
+
+    90px 90px;
+
+
+    opacity:.35;
+
+
+    animation:
+
+    starsDrift 40s linear infinite;
+
+
+}
+
+
+
+
+
+
+@keyframes starsDrift{
+
+
+from{
+
+transform:translateY(0);
+
+}
+
+
+to{
+
+transform:translateY(-300px);
+
+}
+
+
+}
+
+
+
+
+
+
+
+#goldDust span{
+
+
+    position:absolute;
+
+
+    width:5px;
+
+
+    height:5px;
+
+
+    background:
+
+    var(--gold);
+
+
+    border-radius:50%;
+
+
+    box-shadow:
+
+    0 0 20px var(--gold);
+
+
+}
+
+
+
+
+
+
+
+#lightGlow{
+
+
+    position:absolute;
+
+
+    width:500px;
+
+    height:500px;
+
+
+    border-radius:50%;
+
+
+    background:
+
+    radial-gradient(
+
+    circle,
+
+    rgba(216,164,58,.18),
+
+    transparent 70%
+
+    );
+
+
+    top:-150px;
+
+    right:-100px;
+
+
+}
+
+
+
+
+
+
+
+
+
+/* ==========================================================
+   JOURNEY STRUCTURE
+========================================================== */
+
+
+#journey{
+
+
+    width:100%;
+
+    height:100vh;
+
+
+}
+
+
+
+
+
+.chapter{
+
+
+    position:absolute;
+
+
+    inset:0;
+
+
+    display:flex;
+
+
+    justify-content:center;
+
+
+    align-items:center;
+
+
+    opacity:0;
+
+
+    pointer-events:none;
+
+
+    transform:
+
+
+    scale(1.08);
+
+
+    transition:
+
+
+    opacity 1.6s ease,
+
+    transform 1.6s ease;
+
+
+}
+
+
+
+
+
+.chapter.active{
+
+
+    opacity:1;
+
+
+    pointer-events:auto;
+
+
+    transform:
+
+    scale(1);
+
+
+}
+
+
+
+
+
+
+
+.scene-center{
+
+
+    width:min(90%,900px);
+
+
+    text-align:center;
+
+
+}
+
+
+
+
+
+
+h1,
+h2,
+h3{
+
+
+    font-family:
+
+    "Cinzel",serif;
+
+
+    letter-spacing:3px;
+
+
+}
+
+
+
+
+
+h2{
+
+
+    font-size:
+
+    clamp(35px,5vw,65px);
+
+
+    margin-bottom:30px;
+
+
+}
+
+
+
+
+
+p{
+
+
+    font-family:
+
+    "Cormorant Garamond",serif;
+
+
+    font-size:
+
+    clamp(20px,3vw,32px);
+
+
+    line-height:1.6;
+
+
+}
+
+
+
+
+
+
+
+
+/* ==========================================================
+   INTRO
+========================================================== */
+
+
+.opening-title span{
+
+
+    display:block;
+
+
+    opacity:0;
+
+
+    transform:
+
+    translateY(50px);
+
+
+    animation:
+
+    introReveal 2.5s forwards;
+
+
+}
+
+
+
+
+
+.opening-title span:nth-child(2){
+
+
+    animation-delay:2.5s;
+
+
+}
+
+
+
+
+
+
+@keyframes introReveal{
+
+
+to{
+
+
+opacity:1;
+
+
+transform:
+
+translateY(0);
+
+
+}
+
+
+}
+
+
+
+
+
+button{
+
+
+    margin-top:40px;
+
+
+    padding:
+
+    16px 40px;
+
+
+    border-radius:50px;
+
+
+    border:none;
+
+
+    cursor:pointer;
+
+
+    font-family:
+
+    "Poppins",sans-serif;
+
+
+    letter-spacing:2px;
+
+
+    transition:
+
+    .5s ease;
+
+
+}
+
+
+
+
+
+
+button:hover{
+
+
+    transform:
+
+    scale(1.08);
+
+
+}
+
+
+/* ==========================================================
+   MEMORY GATE — CHAPTER 1
+========================================================== */
+
+
+.memory-gate{
+
+
+    width:min(90%,600px);
+
+
+    padding:50px;
+
+
+    background:
+
+    rgba(255,255,255,.06);
+
+
+    backdrop-filter:
+
+    blur(20px);
+
+
+    border:
+
+    1px solid rgba(255,255,255,.15);
+
+
+    border-radius:35px;
+
+
+    box-shadow:
+
+    0 0 60px rgba(0,0,0,.5);
+
+
+}
+
+
+
+
+
+.memory-gate p{
+
+
+    opacity:.8;
+
+
+}
+
+
+
+
+
+#yearInput{
+
+
+    display:block;
+
+
+    margin:35px auto 0;
+
+
+    width:180px;
+
+
+    padding:18px;
+
+
+    text-align:center;
+
+
+    font-size:28px;
+
+
+    color:white;
+
+
+    background:
+
+    rgba(0,0,0,.5);
+
+
+    border:
+
+    1px solid rgba(216,164,58,.6);
+
+
+    border-radius:15px;
+
+
+    outline:none;
+
+
+}
+
+
+
+
+
+#puzzleMessage{
+
+
+    margin-top:20px;
+
+
+    font-family:
+
+    "Dancing Script",cursive;
+
+
+    font-size:30px;
+
+
+    color:
+
+    var(--gold);
+
+
+}
+
+
+
+
+
+
+
+
+/* ==========================================================
+   HEART CHAPTER
+========================================================== */
+
+
+#whiteHeart{
+
+
+    margin:50px auto;
+
+
+    font-size:140px;
+
+
+    cursor:pointer;
+
+
+    filter:
+
+    drop-shadow(
+
+    0 0 35px white
+
+    );
+
+
+    animation:
+
+    heartBeat 2.2s infinite;
+
+
+}
+
+
+
+
+
+@keyframes heartBeat{
+
+
+0%{
+
+transform:scale(1);
+
+}
+
+
+
+50%{
+
+transform:scale(1.12);
+
+}
+
+
+
+100%{
+
+transform:scale(1);
+
+}
+
+
+}
+
+
+
+
+
+.heartDisappear{
+
+
+    animation:
+
+    heartFade 2s forwards;
+
+
+}
+
+
+
+
+
+@keyframes heartFade{
+
+
+to{
+
+
+    transform:
+
+    scale(0);
+
+
+    opacity:0;
+
+
+}
+
+
+}
+
+
+
+
+
+
+
+/* ==========================================================
+   TIMELINE CHAPTER
+========================================================== */
+
+
+.timeline-wrapper{
+
+
+    width:min(90%,1000px);
+
+
+    text-align:center;
+
+
+}
+
+
+
+
+
+.timeline-card{
+
+
+    position:relative;
+
+
+    overflow:hidden;
+
+
+    border-radius:35px;
+
+
+    height:520px;
+
+
+    box-shadow:
+
+    0 0 70px rgba(0,0,0,.7);
+
+
+}
+
+
+
+
+
+
+#timelineImage{
+
+
+    width:100%;
+
+
+    height:100%;
+
+
+    object-fit:cover;
+
+
+    animation:
+
+    slowZoom 12s infinite alternate;
+
+
+}
+
+
+
+
+
+@keyframes slowZoom{
+
+
+from{
+
+transform:scale(1);
+
+}
+
+
+
+to{
+
+transform:scale(1.12);
+
+}
+
+
+}
+
+
+
+
+
+
+.timeline-overlay{
+
+
+    position:absolute;
+
+
+    inset:0;
+
+
+    display:flex;
+
+
+    flex-direction:column;
+
+
+    justify-content:end;
+
+
+    padding:50px;
+
+
+    text-align:left;
+
+
+    background:
+
+
+    linear-gradient(
+
+    transparent,
+
+    rgba(0,0,0,.85)
+
+    );
+
+
+}
+
+
+
+
+
+
+.timeline-overlay h3{
+
+
+    font-size:40px;
+
+
+}
+
+
+
+
+
+.timeline-controls{
+
+
+    display:flex;
+
+
+    justify-content:center;
+
+
+    align-items:center;
+
+
+    gap:50px;
+
+
+}
+
+
+
+
+
+.timeline-controls button{
+
+
+    width:60px;
+
+
+    height:60px;
+
+
+    padding:0;
+
+
+    border-radius:50%;
+
+
+    background:
+
+    rgba(216,164,58,.2);
+
+
+    color:white;
+
+
+    font-size:25px;
+
+
+}
+
+
+
+
+
+
+#timelineDots span{
+
+
+    display:inline-block;
+
+
+    width:8px;
+
+
+    height:8px;
+
+
+    border-radius:50%;
+
+
+    margin:5px;
+
+
+    background:white;
+
+
+}
+
+
+
+
+
+
+
+/* ==========================================================
+   CONSTELLATION CHAPTER
+========================================================== */
+
+
+#nightSky{
+
+
+    position:relative;
+
+
+    width:min(90vw,850px);
+
+
+    height:500px;
+
+
+    margin:auto;
+
+
+    border-radius:40px;
+
+
+    overflow:hidden;
+
+
+    background:
+
+
+    radial-gradient(
+
+    circle,
+
+    #18243d,
+
+    #020205
+
+    );
+
+
+    box-shadow:
+
+    inset 0 0 80px black;
+
+
+}
+
+
+
+
+
+#memoryStars span{
+
+
+    position:absolute;
+
+
+    width:18px;
+
+
+    height:18px;
+
+
+    background:
+
+    white;
+
+
+    border-radius:50%;
+
+
+    cursor:pointer;
+
+
+    box-shadow:
+
+
+    0 0 25px white;
+
+
+    animation:
+
+    starPulse 3s infinite;
+
+
+}
+
+
+
+
+
+@keyframes starPulse{
+
+
+50%{
+
+
+transform:scale(1.5);
+
+
+opacity:.5;
+
+
+}
+
+
+}
+
+
+
+
+
+#memoryStars span.found{
+
+
+    background:
+
+    var(--gold);
+
+
+    box-shadow:
+
+    0 0 40px gold;
+
+
+}
+
+
+
+
+
+
+
+#memoryCard{
+
+
+    position:absolute;
+
+
+    left:50%;
+
+
+    top:50%;
+
+
+    transform:
+
+    translate(-50%,-50%);
+
+
+    width:min(90%,420px);
+
+
+    padding:40px;
+
+
+    background:
+
+    rgba(10,10,10,.9);
+
+
+    border-radius:30px;
+
+
+    opacity:0;
+
+
+    pointer-events:none;
+
+
+    transition:
+
+    1s ease;
+
+
+    border:
+
+    1px solid rgba(216,164,58,.5);
+
+
+}
+
+
+
+
+
+#memoryCard.show{
+
+
+    opacity:1;
+
+
+    pointer-events:auto;
+
+
+}
+
+
+
+
+
+
+
+/* ==========================================================
+   VIDEO CHAPTER
+========================================================== */
+
+
+.cinema-room{
+
+
+    width:min(90%,900px);
+
+
+    text-align:center;
+
+
+}
+
+
+
+
+
+
+.video-frame{
+
+
+    position:relative;
+
+
+    padding:20px;
+
+
+    background:
+
+    linear-gradient(
+
+    135deg,
+
+    #d8a43a,
+
+    #2a1604
+
+    );
+
+
+    border-radius:35px;
+
+
+}
+
+
+
+
+
+#birthdayVideo{
+
+
+    width:100%;
+
+
+    display:block;
+
+
+    border-radius:25px;
+
+
+}
+
+
+
+
+
+
+#playBirthdayVideo{
+
+
+    position:absolute;
+
+
+    top:50%;
+
+
+    left:50%;
+
+
+    transform:
+
+    translate(-50%,-50%);
+
+
+    width:100px;
+
+
+    height:100px;
+
+
+    border-radius:50%;
+
+
+    font-size:40px;
+
+
+    padding:0;
+
+
+}
+
+
+
+
+
+
+
+/* ==========================================================
+   LOVE LETTER CHAPTER
+========================================================== */
+
+
+.letter-scene{
+
+
+    text-align:center;
+
+
+}
+
+
+
+
+
+#envelope{
+
+
+    font-size:120px;
+
+
+    cursor:pointer;
+
+
+    filter:
+
+    drop-shadow(
+
+    0 0 30px gold
+
+    );
+
+
+}
+
+
+
+
+#letterPaper{
+
+
+    width:min(90%,650px);
+
+
+    padding:50px;
+
+
+    margin:auto;
+
+
+    background:
+
+    #fff5df;
+
+
+    color:#3b260d;
+
+
+    border-radius:20px;
+
+
+    opacity:0;
+
+
+    transform:
+
+    translateY(40px);
+
+
+    transition:
+
+    2s ease;
+
+
+}
+
+
+
+
+
+#letterPaper.show{
+
+
+    opacity:1;
+
+
+    transform:
+
+    translateY(0);
+
+
+}
+
+
+
+
+#letterText{
+
+
+    font-family:
+
+    "Dancing Script",cursive;
+
+
+    font-size:35px;
+
+
+}
+/* ==========================================================
+   FINAL REVEAL CHAPTER
+========================================================== */
+
+
+#chapterFinal{
+
+
+    overflow:hidden;
+
+
+}
+
+
+
+
+
+.final-world{
+
+
+    position:absolute;
+
+
+    inset:0;
+
+
+    display:flex;
+
+
+    justify-content:center;
+
+
+    align-items:center;
+
+
+    overflow:hidden;
+
+
+}
+
+
+
+
+
+/* Sunset background */
+
+
+.sunset{
+
+
+    position:absolute;
+
+
+    inset:0;
+
+
+    background:
+
+
+    linear-gradient(
+
+    180deg,
+
+    #120b1c,
+
+    #6b3b16,
+
+    #e09a45
+
+    );
+
+
+}
+
+
+
+
+
+
+/* Sun glow */
+
+
+.sunset::after{
+
+
+    content:"";
+
+
+    position:absolute;
+
+
+    width:350px;
+
+
+    height:350px;
+
+
+    background:
+
+
+    radial-gradient(
+
+    circle,
+
+    #ffd77a,
+
+    transparent 70%
+
+    );
+
+
+    bottom:15%;
+
+
+    left:50%;
+
+
+    transform:
+
+    translateX(-50%);
+
+
+    filter:
+
+    blur(20px);
+
+
+}
+
+
+
+
+
+
+/* Sunflower field */
+
+
+.sunflower-field{
+
+
+    position:absolute;
+
+
+    bottom:-20px;
+
+
+    width:120%;
+
+
+    height:45%;
+
+
+    background:
+
+
+    linear-gradient(
+
+    180deg,
+
+    transparent,
+
+    rgba(50,35,5,.9)
+
+    );
+
+
+}
+
+
+
+
+
+.sunflower-field::before{
+
+
+    content:"🌻 🌻 🌻 🌻 🌻 🌻 🌻 🌻 🌻 🌻";
+
+
+    position:absolute;
+
+
+    bottom:40px;
+
+
+    width:100%;
+
+
+    text-align:center;
+
+
+    font-size:70px;
+
+
+    letter-spacing:30px;
+
+
+    animation:
+
+    fieldMove 15s infinite alternate;
+
+
+}
+
+
+
+
+@keyframes fieldMove{
+
+
+from{
+
+transform:translateX(-30px);
+
+}
+
+
+
+to{
+
+transform:translateX(30px);
+
+}
+
+
+}
+
+
+
+
+
+
+
+
+/* Final text */
+
+
+.final-message{
+
+
+    position:relative;
+
+
+    z-index:5;
+
+
+    text-align:center;
+
+
+    padding:30px;
+
+
+}
+
+
+
+
+
+
+#finalLineOne,
+#finalLineTwo{
+
+
+    opacity:0;
+
+
+    transform:
+
+    translateY(40px);
+
+
+    transition:
+
+    2s ease;
+
+
+    color:white;
+
+
+}
+
+
+
+
+
+#loveReveal{
+
+
+    margin-top:50px;
+
+
+    font-size:
+
+    clamp(70px,12vw,150px);
+
+
+    color:white;
+
+
+    opacity:0;
+
+
+    transform:
+
+    scale(.7);
+
+
+    transition:
+
+    3s ease;
+
+
+    text-shadow:
+
+
+    0 0 20px gold,
+
+    0 0 60px gold;
+
+
+}
+
+
+
+
+
+
+#loveReveal.show{
+
+
+    opacity:1;
+
+
+    transform:
+
+    scale(1);
+
+
+}
+
+
+
+
+
+.signature{
+
+
+    margin-top:30px;
+
+
+    font-family:
+
+    "Dancing Script",cursive;
+
+
+    font-size:70px;
+
+
+}
+
+
+
+
+
+.secret-code{
+
+
+    margin-top:30px;
+
+
+    letter-spacing:15px;
+
+
+    font-size:18px;
+
+
+    opacity:.6;
+
+
+}
+
+
+
+
+
+/* ==========================================================
+   PETALS
+========================================================== */
+
+
+.petal{
+
+
+    position:fixed;
+
+
+    width:15px;
+
+
+    height:22px;
+
+
+    background:
+
+    var(--sunflower);
+
+
+    border-radius:
+
+    50% 0 50% 0;
+
+
+    animation:
+
+    petalFall 10s linear infinite;
+
+
+}
+
+
+
+
+
+@keyframes petalFall{
+
+
+from{
+
+
+transform:
+
+translateY(-100px)
+
+rotate(0deg);
+
+
+opacity:1;
+
+
+}
+
+
+
+to{
+
+
+transform:
+
+translateY(110vh)
+
+rotate(360deg);
+
+
+opacity:0;
+
+
+}
+
+
+}
+
+
+
+
+
+
+
+
+
+/* ==========================================================
+   FIREFLIES
+========================================================== */
+
+
+.firefly{
+
+
+    position:fixed;
+
+
+    width:6px;
+
+
+    height:6px;
+
+
+    border-radius:50%;
+
+
+    background:#fff0a0;
+
+
+    box-shadow:
+
+
+    0 0 20px gold;
+
+
+    animation:
+
+    fly 8s infinite;
+
+
+}
+
+
+
+
+
+@keyframes fly{
+
+
+0%{
+
+
+transform:
+
+translate(0,0);
+
+
+opacity:.2;
+
+
+}
+
+
+
+50%{
+
+
+opacity:1;
+
+
+}
+
+
+
+100%{
+
+
+transform:
+
+translate(100px,-200px);
+
+
+opacity:0;
+
+
+}
+
+
+}
+
+
+
+
+
+
+
+
+
+/* ==========================================================
+   RESPONSIVE DESIGN
+========================================================== */
+
+
+@media(max-width:768px){
+
+
+
+h2{
+
+
+font-size:34px;
+
+
+}
+
+
+
+p{
+
+
+font-size:22px;
+
+
+}
+
+
+
+.memory-gate{
+
+
+padding:30px;
+
+
+}
+
+
+
+#whiteHeart{
+
+
+font-size:90px;
+
+
+}
+
+
+
+.timeline-card{
+
+
+height:350px;
+
+
+}
+
+
+
+.timeline-overlay{
+
+
+padding:25px;
+
+
+}
+
+
+
+.timeline-overlay h3{
+
+
+font-size:28px;
+
+
+}
+
+
+
+#nightSky{
+
+
+height:350px;
+
+
+}
+
+
+
+.signature{
+
+
+font-size:45px;
+
+
+}
+
+
+
+.secret-code{
+
+
+letter-spacing:7px;
+
+
+}
+
+
+
+#loveReveal{
+
+
+font-size:65px;
+
+
+}
+
+
+
+button{
+
+
+padding:
+
+14px 28px;
+
+
+}
+
+
+}
+
+
+
+
+
+
+/* ==========================================================
+   REDUCED MOTION SUPPORT
+========================================================== */
+
+
+@media(prefers-reduced-motion:reduce){
+
+
+*{
+
+
+animation-duration:
+
+0.01ms !important;
+
+
+transition-duration:
+
+0.01ms !important;
+
+
+}
+
+
+
+}
